@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    scroll-behavior:smooth;
+}
+html{
+    background-color: #0D1821;
+}
+body{
+    background-color: #0D1821;
+}
+nav{
+    display: flex;
+    position: sticky;
+    font-size: 20px;
+    background-color: #B4CDED;
+}
+a{
+    text-decoration: none;
+}
+nav span{
+    align-items: center;
+    justify-content: center;
+    padding: 1em 2em 1em;
+    cursor: pointer;
+    display: flex;
+    color: #344966;
+}
+nav span p{
+    color: #0a4ca8;
+    font-size: 1.25em;
+}
+nav ul{
+    display: flex;
+    padding-left: 4em;
+}
+nav ul li{
+    text-decoration: none;
+    list-style: none;
+    margin: .5em .2em;
+    padding: .5em 1em;
+    transition: .9s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+nav ul li a{
+    color: #344966;
+}
+nav ul li:hover{
+    background-color: #0D1821;
+    border-radius: .75em;
+}
+nav ul li:hover a{
+    color: #F0F4EF;
+}
+article{
+    color: #F0F4EF;
+    width: 100%;
+    font-size: 22px;
+    margin:0 auto 1em;
+}
+.desc{
+    background-color: #B4CDED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: topentry 1s 0 .5s;
+}
+.desc div{
+    color: #0D1821;
+    margin: 2% 8% 4% 5%;
+    width: 30%;
+}
+.desc img{
+    width: 50%;
+    height: 40%;
+    margin: .5em auto;
+    border-radius: 1em;
+}
+#resume, #work, #about{
+    animation: leftentry 1s ease-in-out forwards; /* assign animation to monitor with 'monitorIn' as keyframe name */
+}
+#services, #certificates{
+    animation: rightentry 1s ease-in-out forwards;
+}
+#about{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+#about p{
+    width: 50%;
+    margin: .5em auto;
+}
+#about p a{
+    text-decoration: none;
+    color: #BFCC94;
+}
+#about img{
+    width: 30%;
+    height: 400px;
+    margin: auto;
+}
+#services{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+#services p{
+    display: block;
+    width: 50%;
+    margin: .5em auto;
+}
+#services img{
+    width: 30%;
+    height: 400px;
+    margin: auto;
+}
+#work{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+#work p{
+    width: auto;
+    margin: 5%;
+}
+#certificates{
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+}
+#certificates p{
+    width: 100%;
+}
+#certificates .files{
+    margin: 2em auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.cert{
+    padding: 1em 0;
+    margin: 0;
+}
+#certificates .files .cert iframe{
+    width: 80%;
+    height: 400px;
+}
+#resume{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+#resume div{
+    display: flex;
+}
+#resume img{
+    margin: 0 5%;
+    width: 30%;
+    height: 400px;
+}
+#resume div{
+    width: 50%;
+    display: block;
+    margin: 0 5%;
+}
+#resume div p{
+    margin: 1em;
+}
+#resume div div{
+    display: flex;
+    margin: 0 auto;
+}
+.resumebtn{
+    padding: .5em .75em;
+    margin: 1% 1em;
+    text-decoration: none;
+    color: #0D1821;
+    background: linear-gradient(180deg, #B4CDED 0%, #0a4ca8 49%, #0D1821 50%, #344966 100%);
+    background-size: 1px 100px;
+    border-radius: .5em;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.resumebtn:hover{
+    background-position: 0 -50px;
+    color: white;
+    font-weight: bolder;
+}
+footer{
+    background-color: #B4CDED;
+    color: #0D1821;
+    display: flex;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+footer span{
+    margin: 1em 5%;
+    font-size: 20px;
+}
+footer div{
+    display: flex;
+    justify-items: center;
+    margin: 1em auto;
+}
+footer div a{
+    
+    margin-left: 15%;
+}
+footer div a img{
+    width: 50px;
+    height: 50px;
+}
+@keyframes topentry{
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes rightentry{
+    from{
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes leftentry{
+    from{
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
